@@ -5,5 +5,9 @@ import "@chainlink/contracts/src/v0.6/interfaces/AggregatorV3Interface.sol";
 
 
 contract PriceConsumerV3 {
-    
+    AggregatorV3Interface public priceFeed;
+
+    constructor() public {
+        priceFeed = AggregatorV3Interface(0x694AA1769357215DE4FAC081bf1f309aDC325306);
+    }
 }
