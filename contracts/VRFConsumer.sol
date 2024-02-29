@@ -17,4 +17,12 @@ contract VRFConsumer is VRFConsumerBase{
         keyHash = 0x474e34a077df58807dbe9c96d3c009b23b3c6d0cce433e59bbf5b34f823bc56c;
         fee = 100000000000000000;
     }
+
+    function getRandomNumber() public returns (bytes32 requestId) {
+        return requestRandomness(keyHash, fee);
+    }
+
+    function fulfillRandomness(bytes32 requestId, uint256 randomness) internal override {
+        randomResult = randomness;
+    }
 }
