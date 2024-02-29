@@ -3,6 +3,8 @@ pragma solidity 0.6.7;
 
 import "@chainlink/contracts/src/v0.6/VRFConsumerBase.sol";
 
+/// TODO update to VRF V2: https://docs.chain.link/vrf/v2/getting-started
+
 contract VRFConsumer is VRFConsumerBase{
 
     /// @dev Network: Sepolia
